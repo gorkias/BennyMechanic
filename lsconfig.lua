@@ -539,14 +539,14 @@ LSC_Config.prices = {
 	
 ---------Headlights---------
 	[22] = {
-		{name = "Stock Lights", mod = 0, price = 0},
-		{name = "Xenon Lights", mod = 1, price = 250},
+		{name = "Stok Işıklar", mod = 0, price = 0},
+		{name = "Xenon Işıklar", mod = 1, price = 250},
 	},
 	
 ----------Turbo---------
 	[18] = {
-		{ name = "None", mod = 0, price = 0},
-		{ name = "Turbo Tuning", mod = 1, price = 10000},
+		{ name = "Yok", mod = 0, price = 0},
+		{ name = "Turbo Ekle", mod = 1, price = 10000},
 	},
 	
 -----------Armor-------------
@@ -607,16 +607,16 @@ LSC_Config.prices = {
 
 ----------Transmission---------
 	[13] = {
-		{name = "Street Transmission", mod = 0, price = 5000},
-		{name = "Sports Transmission", mod = 1, price = 10000},
-		{name = "Race Transmission", mod = 2, price = 15000},
+		{name = "Sokak Hızlandırması", mod = 0, price = 5000},
+		{name = "Spor Hızlandırma", mod = 1, price = 10000},
+		{name = "Yarış Hızlandırması", mod = 2, price = 15000},
 	},
 	
 -----------Brakes-------------
 	[12] = {
-		{name = "Street Brakes", mod = 0, price = 5000},
-		{name = "Sport Brakes", mod = 1, price = 10000},
-		{name = "Race Brakes", mod = 2, price = 15000},
+		{name = "Sokak Frenleri", mod = 0, price = 5000},
+		{name = "Spor Frenler", mod = 1, price = 10000},
+		{name = "Yarış Frenleri", mod = 2, price = 15000},
 	},
 	
 ------------Engine----------
@@ -720,7 +720,7 @@ LSC_Config.menu = {
 	--Left
 	--Right
 	--Custom position, example: position = {x = 0.2, y = 0.2}
-	position = "left",
+	position = "right",
 
 -------Menu theme--------
 	--Possible themes: light, darkred, bluish, greenish
