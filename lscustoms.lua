@@ -354,7 +354,7 @@ local function DriveInGarage()
 		local damage = 0
 		local cunt = GetVehicleBodyHealth(veh)
 		local repairCost = math.ceil(1050 - cunt)
-		LSCMenu:addPurchase("Repair vehicle",repairCost, "Full body repair and engine service.")
+		LSCMenu:addPurchase("Tamir Et",repairCost, "Aracı tamir eder.")
 		
 		--Setup table for vehicle with all mods, colors etc.
 		SetVehicleModKit(veh,0)	
