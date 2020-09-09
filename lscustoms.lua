@@ -410,18 +410,18 @@ local function DriveInGarage()
 			end
 		end
 		
-		AddMod(0,LSCMenu.categories,"SPOILER", "Spoiler", "Increase downforce.",true)
-		AddMod(3,LSCMenu.categories,"SKIRTS", "Skirts", "Enhance your vehicle's look with custom side skirts.",true)
-		AddMod(4,LSCMenu.categories,"EXHAUST", "Exhausts", "Customized sports exhausts.",true)
-		AddMod(6,LSCMenu.categories,"GRILLE", "Grille", "Improved engine cooling.",true)
-		AddMod(7,LSCMenu.categories,"HOOD", "Hood", "Enhance car engine cooling.",true)
-		AddMod(8,LSCMenu.categories,"FENDERS", "Fenders", "Enhance body paneling with custom fenders.",true)
-		AddMod(10,LSCMenu.categories,"ROOF", "Roof", "Lower your center of gravity with lightweight roof panels.",true)
-		AddMod(12,LSCMenu.categories,"BRAKES", "Brakes", "Increase stopping power and eliminate brake fade.",true)
-		AddMod(13,LSCMenu.categories,"TRANSMISSION", "Transmission", "Improved acceleration with close ratio transmission.",true)
-		AddMod(14,LSCMenu.categories,"HORN", "Horn", "Custom air horns.",true)
-		AddMod(15,LSCMenu.categories,"SUSPENSION","Suspension","Upgrade to a sports oriented suspension setup.",true)
-		AddMod(18, LSCMenu.categories, "TURBO", "Turbo", "Reduced lag turbocharger.",false)
+		AddMod(0,LSCMenu.categories,"SPOILER", "Spiler", "",true)
+		AddMod(3,LSCMenu.categories,"SKIRTS", "Skirts", "",true)
+		AddMod(4,LSCMenu.categories,"EXHAUST", "Egzozlar", "",true)
+		AddMod(6,LSCMenu.categories,"GRILLE", "Grille", "",true)
+		AddMod(7,LSCMenu.categories,"HOOD", "Kaput", "Enhance car engine cooling.",true)
+		AddMod(8,LSCMenu.categories,"FENDERS", "Fenders", "",true)
+		AddMod(10,LSCMenu.categories,"ROOF", "Tavan", "",true)
+		AddMod(12,LSCMenu.categories,"BRAKES", "Frenler", "",true)
+		AddMod(13,LSCMenu.categories,"TRANSMISSION", "Hızlanma", "",true)
+		AddMod(14,LSCMenu.categories,"HORN", "Korna", "",true)
+		AddMod(15,LSCMenu.categories,"SUSPENSION","Süspansiyon","",true)
+		AddMod(18, LSCMenu.categories, "TURBO", "Turbo", "",false)
 		
 		if chassis then
 			LSCMenu.categories:addSubMenu("CHASSIS", "Chassis",nil, true)
@@ -433,31 +433,31 @@ local function DriveInGarage()
 			AddMod(5,LSCMenu.categories.Chassis,"ROLL CAGE", "Roll cage", "Stiffen your chassis with a rollcage.",true)
 		end
 		
-		LSCMenu.categories:addSubMenu("ENGINE", "Engine",nil, true)
-		AddMod(39, LSCMenu.categories.Engine, "ENGINE BLOCK", "Engine Block", "Custom engine block casings.",true)
-		AddMod(40, LSCMenu.categories.Engine, "CAM COVER", "Cam Cover", "Optional cam covers.",true)
-		AddMod(41, LSCMenu.categories.Engine, "STRUT BRACE", "Strut Brace", "A selection of support struts.",true)
-		AddMod(11,LSCMenu.categories.Engine,"ENGINE TUNES", "Engine Tunes", "Increases horsepower.",true)
+		LSCMenu.categories:addSubMenu("ENGINE", "Motor",nil, true)
+		AddMod(39, LSCMenu.categories.Engine, "ENGINE BLOCK", "Engine Block", "",true)
+		AddMod(40, LSCMenu.categories.Engine, "CAM COVER", "Cam Cover", "",true)
+		AddMod(41, LSCMenu.categories.Engine, "STRUT BRACE", "Strut Brace", "",true)
+		AddMod(11,LSCMenu.categories.Engine,"ENGINE TUNES", "Engine Tunes", "",true)
 		
 		if interior then
-			LSCMenu.categories:addSubMenu("INTERIOR", "Interior","Products for maximum style and comfort.", true)
+			LSCMenu.categories:addSubMenu("INTERIOR", "Interior","", true)
 			--LSCMenu.categories.Interior:addSubMenu("TRIM", "Trim","A selection of interior designs.", true)
 			AddMod(27, LSCMenu.categories.Interior, "TRIM DESIGN", "Trim Design", "",true)
 			--There are'nt any working natives that could change interior color :(
 			--LSCMenu.categories.Interior.Trim:addSubMenu("TRIM COLOR", "Trim Color","", true)
-			AddMod(28, LSCMenu.categories.Interior, "ORNAMENTS", "Ornaments", "Add decorative items to your dash.",true)
-			AddMod(29, LSCMenu.categories.Interior, "DASHBOARD", "Dashboard", "Custom control panel designs.",true)
-			AddMod(30, LSCMenu.categories.Interior, "DIAL DESIGN", "Dials", "Customize the look of your dials.",true)
-			AddMod(31, LSCMenu.categories.Interior, "DOORS", "Doors", "Install door upgrades.",true)
-			AddMod(32, LSCMenu.categories.Interior, "SEATS", "Seats", "Options where style meets comfort.",true)
-			AddMod(33, LSCMenu.categories.Interior, "STEERING WHEELS", "Steering Wheels", "Customize the link between you and your vehicle.",true)
+			AddMod(28, LSCMenu.categories.Interior, "ORNAMENTS", "Ornaments", "",true)
+			AddMod(29, LSCMenu.categories.Interior, "DASHBOARD", "Dashboard", "",true)
+			AddMod(30, LSCMenu.categories.Interior, "DIAL DESIGN", "Dials", "",true)
+			AddMod(31, LSCMenu.categories.Interior, "DOORS", "Doors", "",true)
+			AddMod(32, LSCMenu.categories.Interior, "SEATS", "Seats", "",true)
+			AddMod(33, LSCMenu.categories.Interior, "STEERING WHEELS", "Steering Wheels", "",true)
 			AddMod(34, LSCMenu.categories.Interior, "Shifter leavers", "Shifter leavers", "",true)
 			AddMod(35, LSCMenu.categories.Interior, "Plaques", "Plaques", "",true)
 			AddMod(36, LSCMenu.categories.Interior, "Speakers", "Speakers", "",true)
 			AddMod(37, LSCMenu.categories.Interior, "Trunk", "Trunk", "",true)
 		end
 		
-		LSCMenu.categories:addSubMenu("PLATES", "Plates","Decorative identification.", true)
+		LSCMenu.categories:addSubMenu("PLATES", "Plaka","Decorative identification.", true)
 		LSCMenu.categories.Plates:addSubMenu("LICENSE", "License", "",true)
 		for n, mod in pairs(LSC_Config.prices.plates) do
 			local btn = LSCMenu.categories.Plates.License:addPurchase(mod.name,mod.price)btn.plateindex = mod.plateindex
@@ -468,19 +468,19 @@ local function DriveInGarage()
 		--AddMod(47, LSCMenu.categories, "UNK47", "unk47", "",true)
 		--AddMod(49, LSCMenu.categories, "UNK49", "unk49", "",true)
 		AddMod(38,LSCMenu.categories,"HYDRAULICS","Hydraulics","",true)
-		AddMod(48,LSCMenu.categories,"Liveries", "Liveries", "A selection of decals for your vehicle.",true)
+		AddMod(48,LSCMenu.categories,"Liveries", "Liveries", "",true)
 		
 		if bumper then
-			LSCMenu.categories:addSubMenu("BUMPERS", "Bumpers", "Custom front and rear bumpers.",true)
+			LSCMenu.categories:addSubMenu("BUMPERS", "Tampon", "",true)
 			if fbumper then
-				AddMod(1,LSCMenu.categories.Bumpers,"FRONT BUMPERS", "Front bumpers", "Custom front bumpers.",true)
+				AddMod(1,LSCMenu.categories.Bumpers,"FRONT BUMPERS", "Front bumpers", "",true)
 			end
 			if rbumper then
 				AddMod(2,LSCMenu.categories.Bumpers,"REAR BUMPERS", "Rear bumpers", "Custom rear bumpers.",true)
 			end
 		end
 		
-		local m = LSCMenu.categories:addSubMenu("LIGHTS", "Lights", "Improved night time visibility.",true)
+		local m = LSCMenu.categories:addSubMenu("LIGHTS", "Işıklar", "",true)
 		AddMod(22,LSCMenu.categories.Lights,"HEADLIGHTS", "Headlights", nil, false)
 		if not IsThisModelABike(GetEntityModel(veh)) then
 			m = m:addSubMenu("NEON KITS", "Neon kits", nil, true)
@@ -497,7 +497,7 @@ local function DriveInGarage()
 		end
 
 		
-		respray = LSCMenu.categories:addSubMenu("RESPRAY", "Respray", "Transforms vehicle appearance.",true)
+		respray = LSCMenu.categories:addSubMenu("RESPRAY", "Boya", "",true)
 			pcol = respray:addSubMenu("PRIMARY COLORS", "Primary color",  nil,true)
 				pcol:addSubMenu("CHROME", "Chrome", nil,true)
 				for n, c in pairs(LSC_Config.prices.chrome.colors) do
@@ -572,8 +572,8 @@ local function DriveInGarage()
 				end
 		
 		
-		LSCMenu.categories:addSubMenu("WHEELS", "Wheels", "Custom rims, tires and colors.",true)
-			wtype = LSCMenu.categories.Wheels:addSubMenu("WHEEL TYPE", "Wheel type", "Custom rims in all styles and sizes.",true)
+		LSCMenu.categories:addSubMenu("WHEELS", "Tekerler", "",true)
+			wtype = LSCMenu.categories.Wheels:addSubMenu("WHEEL TYPE", "Wheel type", "",true)
 				if IsThisModelABike(GetEntityModel(veh)) then
 					fwheels = wtype:addSubMenu("FRONT WHEEL", "Front wheel", nil,true)
 						for n, w in pairs(LSC_Config.prices.frontwheel) do
@@ -614,7 +614,7 @@ local function DriveInGarage()
 						end
 				end
 					
-		m = LSCMenu.categories.Wheels:addSubMenu("WHEEL COLOR", "Wheel color", "Custom wheel colors.",true)
+		m = LSCMenu.categories.Wheels:addSubMenu("WHEEL COLOR", "Wheel color", "",true)
 			for n, c in pairs(LSC_Config.prices.wheelcolor.colors) do
 				local btn = m:addPurchase(c.name,LSC_Config.prices.wheelcolor.price)btn.colorindex = c.colorindex
 			end
