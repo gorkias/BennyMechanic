@@ -97,7 +97,7 @@ Citizen.CreateThread(function()
 
             if nearDefault <=5 then
                 if not isPlyInBennys then
-                    Draw3DText(bennyLocation.x, bennyLocation.y, bennyLocation.z + 0.5, "[~p~E~w~ - Bas ve mekaniğe eriş]", 255, 255, 255, 255, 4, 0.45, true, true, true, true, 0, 0, 0, 0, 55)
+                    Draw3DText(bennyLocation.x, bennyLocation.y, bennyLocation.z + 0.5, "[~p~E~w~ - Bas ve mekanige eris]", 255, 255, 255, 255, 4, 0.45, true, true, true, true, 0, 0, 0, 0, 55)
                     DrawMarker(21, bennyLocation.x, bennyLocation.y, bennyLocation.z + 0.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 148, 0, 211, 255, true, false, 2, true, nil, nil, false)
                 else
                     disableControls()
@@ -108,7 +108,7 @@ Citizen.CreateThread(function()
 
             if nearImport <=5 then
                 if not isPlyInBennys then
-                    Draw3DText(bennyLocationImport.x, bennyLocationImport.y, bennyLocationImport.z + 1.2, "[~p~E~w~ - Bas ve eriş]", 255, 255, 255, 255, 4, 0.45, true, true, true, true, 0, 0, 0, 0, 55)
+                    Draw3DText(bennyLocationImport.x, bennyLocationImport.y, bennyLocationImport.z + 1.2, "[~p~E~w~ - Bas ve eris]", 255, 255, 255, 255, 4, 0.45, true, true, true, true, 0, 0, 0, 0, 55)
                     DrawMarker(21, bennyLocationImport.x, bennyLocationImport.y, bennyLocationImport.z + 1.2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 148, 0, 211, 255, true, false, 2, true, nil, nil, false)
                 else
                     disableControls()
@@ -120,7 +120,7 @@ Citizen.CreateThread(function()
 
             if nearTuner <=5 then
                 if not isPlyInBennys then
-                    Draw3DText(bennyLocationTuner.x, bennyLocationTuner.y, bennyLocationTuner.z + 0.5, "[~p~E~w~ - Bas ve eriş.]", 255, 255, 255, 255, 4, 0.45, true, true, true, true, 0, 0, 0, 0, 55)
+                    Draw3DText(bennyLocationTuner.x, bennyLocationTuner.y, bennyLocationTuner.z + 0.5, "[~p~E~w~ - Bas ve eris.]", 255, 255, 255, 255, 4, 0.45, true, true, true, true, 0, 0, 0, 0, 55)
                     DrawMarker(21, bennyLocationTuner.x, bennyLocationTuner.y, bennyLocationTuner.z + 0.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 148, 0, 211, 255, true, false, 2, true, nil, nil, false)
                 else
                    disableControls()
@@ -1211,16 +1211,16 @@ end
 function CanPurchase(price, canpurchase)
 	if canpurchase then
 		if LSCMenu.currentmenu == "main" then
-			LSCMenu:showNotification("Your vehicle has been repaired.")
+			LSCMenu:showNotification("Aracin tamir oldu.")
 		else
-			LSCMenu:showNotification("Item purchased.")
+			LSCMenu:showNotification("Esya alindi.")
 			local vehicle = GetVehiclePedIsIn(PlayerPedId(), false)
 			myCar = ESX.Game.GetVehicleProperties(vehicle)
 			TriggerServerEvent('esx_lscustom:refreshOwnedVehicle', myCar)
 		end
 		return true
 	else
-		LSCMenu:showNotification("~r~You cannot afford this purchase.")
+		LSCMenu:showNotification("~r~Bunu yapamazsin.")
 		return false
 	end
 end
